@@ -19,4 +19,10 @@ describe('Login', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('password should not be empty', () => {
+    const passwordElement = fixture.nativeElement.querySelector('#password');
+    passwordElement.value = '';
+    expect(passwordElement.value).not.toBe('');
+  })
 });
